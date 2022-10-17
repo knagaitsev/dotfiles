@@ -25,3 +25,5 @@ tic -x misc/xterm-256color-italic.terminfo
 tic -x misc/tmux-256color.terminfo
 
 echo "Setup Complete!"
+
+echo "Add the following to ~/.bashrc: export PATH=${DOTFILES}/bin:\$PATH"

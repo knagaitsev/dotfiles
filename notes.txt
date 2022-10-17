@@ -1,0 +1,14 @@
+Things I want:
+- Searching feature to rapidly search across files `search ...`
+
+- Good copy-paste support
+- Good scrolling
+- auto formatting of code
+- Git diff feature
+
+TODO:
+- Update this README explaining how to install this repo
+    - Need to get nvim dependencies before using installer in tools
+- Make a `search` alias command for grep, install it with dotfiles
+- Figure out how to do remote vscode `code` command
+- Make mac windows open up separately rather than piling up

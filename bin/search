@@ -1,0 +1,1 @@
+grep -irnw "." -e "$@" --color=always
