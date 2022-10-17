@@ -53,6 +53,3 @@
 (vim.cmd "let $FZF_DEFAULT_OPTS = '--reverse'")
 (vim.cmd "autocmd TermOpen * setlocal nonumber norelativenumber")
 
-
-(local colors (require :core.colors))
-(colors.select-colorscheme colors.snazzy-black)
