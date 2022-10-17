@@ -7,3 +7,12 @@ misc/tools.sh
 ./install.sh
 ```
 
+You may need to run this in nvim:
+```
+PackerInstall
+```
+
+You may need to source for tmux:
+```
+tmux source-file ~/.tmux.conf
+```
