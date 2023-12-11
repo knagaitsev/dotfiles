@@ -7,7 +7,7 @@ sudo apt install fish
 
 sudo apt install ripgrep ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen python3-venv
 
-misc/tools.sh
+make
 ./install.sh
 ```
 

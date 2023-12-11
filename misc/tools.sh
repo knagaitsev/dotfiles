@@ -36,6 +36,7 @@ popd
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 mkdir -p ~/.tmux/plugins/tpm
+rm -rf ~/.tmux/plugins/tpm
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
