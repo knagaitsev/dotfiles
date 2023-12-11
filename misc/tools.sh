@@ -41,7 +41,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 
-alias install-node="curl -sfLS https://install-node.vercel.app | bash -s --"
+install-node="curl -sfLS https://install-node.vercel.app | bash -s --"
 install-node 20 -y --prefix=$HOME/.local/bin
 npm install --global yarn
 
