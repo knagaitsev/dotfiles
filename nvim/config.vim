@@ -153,8 +153,6 @@ EOF
 " lua require('feline').setup()
 " lua require('feline-cat')
 
-colorscheme catppuccin-frappe
-
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>

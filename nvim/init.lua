@@ -120,3 +120,5 @@ require("neo-tree").setup({
 
 -- local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
 
+vim.cmd("colorscheme catppuccin-frappe")
+
