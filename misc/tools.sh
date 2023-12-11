@@ -17,7 +17,7 @@ function buildstep {
 
 function fetch {
 	if [ ! -d $1 ]; then
-		git clone --depth 1 $2 $1
+		git clone --depth 1 $2 $1 --branch $3
 	fi
 }
 
@@ -27,7 +27,7 @@ export LD_RUN_PATH="$LD_RUN_PATH:$HOME/.local/lib"
 
 pushd $ROOT
 
-fetch neovim https://github.com/neovim/neovim.git
+fetch neovim https://github.com/neovim/neovim.git v0.9.4
 pushd neovim
 	buildstep "neovim/build" make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_INSTALL_PREFIX=$HOME/.local
 	buildstep "neovim/install" make install

@@ -14,9 +14,14 @@
 
 scriptencoding utf-8
 filetype off
+
+" for nvim-tree.lua
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 set nocompatible
 set noshowmode
-set laststatus=0
+"set laststatus=1
 set winminheight=0
 set splitbelow
 set splitright
@@ -96,7 +101,6 @@ nnoremap <leader>Q :qall<CR>
 
 noremap <C-l> :tabprevious<CR>
 noremap <C-h> :tabnext<CR>
-noremap <leader>t :tabnew<CR>
 noremap <leader>f :ClangFormat<CR>
 
 nnoremap <leader>P :PackerSync<CR>
@@ -130,4 +134,58 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 "     set grepformat=%f:%l:%c%m
 " endif
 au BufRead,BufNewFile *.nesl set filetype=nesl
+
+nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
+
+
+" Set up the lua path variable
+let g:lua_path = expand('~/.config/nvim/lua')
+
+" Add the lua path to package.path (execute lua)
+lua << EOF
+  package.path = '/home/kir/.local/share/nvim/lua/?.lua;' .. package.path
+EOF
+
+" lua require('plugins')
+
+" lua require('feline').setup()
+" lua require('feline-cat')
+
+colorscheme catppuccin-frappe
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Formatting selected code
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+set nowrap
+
+" :vsp - split windows
+" leader: \
+
+nmap <leader>rn <Plug>(coc-rename)
+
+noremap <C-t> :tabnew<CR>
+map <C-f> /
+map <C-c> y
+map <C-z> u
+map <C-y> <C-r>
+map <C-s> :w<CR>
+
+map <C-n> :NvimTreeToggle<CR>
+
+" map in interactive mode
+vmap <BS> d
+
+map <C-_> gcc
+vmap <C-_> gc
+
+let g:coc_global_extensions = ['coc-clangd', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-tsserver', 'coc-pyright']
+	" 'coc-prettier',
 
