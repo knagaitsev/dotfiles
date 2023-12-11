@@ -24,6 +24,10 @@ echo "installing terminfos"
 tic -x misc/xterm-256color-italic.terminfo
 tic -x misc/tmux-256color.terminfo
 
+cd ~/.local/share/nvim/lazy/coc.nvim
+yarn install
+yarn build
+
 echo "Setup Complete!"
 
-echo "Add the following to ~/.bashrc: export PATH=${DOTFILES}/bin:\$PATH"
+# echo "Add the following to ~/.bashrc: export PATH=${DOTFILES}/bin:\$PATH"
