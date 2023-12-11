@@ -1,8 +1,9 @@
 
 .PHONY: tools
 
-all:
-	@echo "Available: tools"
+all: tools
 
 tools:
 	@misc/tools.sh
+	./install.sh
+
