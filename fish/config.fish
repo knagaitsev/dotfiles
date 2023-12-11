@@ -8,6 +8,8 @@ oh-my-posh init fish --config ~/.config/fish/themes/tonybaloney.omp.json | sourc
 
 fish_config theme choose "Tomorrow Night Bright"
 
+alias sshadd 'bash; eval "$(ssh-agent)"; ssh-add;'
+
 # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 #
 # set -e LD_INCLUDE_PATH
