@@ -178,7 +178,7 @@ map <C-z> u
 map <C-y> <C-r>
 map <C-s> :w<CR>
 
-map <C-n> :NvimTreeToggle<CR>
+map <C-n> :Neotree<CR>
 
 " map in interactive mode
 vmap <BS> d
@@ -188,4 +188,6 @@ vmap <C-_> gc
 
 let g:coc_global_extensions = ['coc-clangd', 'coc-json', 'coc-git', 'coc-rust-analyzer', 'coc-tsserver', 'coc-pyright']
 	" 'coc-prettier',
+
+vmap <tab> >
 

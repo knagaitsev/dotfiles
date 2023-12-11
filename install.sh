@@ -7,9 +7,9 @@ DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 mkdir -p ~/.config
 mkdir -p ~/.local/{bin,local,lib}
 
-# echo "Installing fish configuratin..."
-# rm -rf ~/.config/fish
-# ln -sF ${DOTFILES}/fish/ ~/.config
+echo "Installing fish configuration..."
+rm -rf ~/.config/fish
+ln -sF ${DOTFILES}/fish/ ~/.config
 
 echo "Installing tmux config"
 ln -sf ${DOTFILES}/tmux/tmux.conf ~/.tmux.conf

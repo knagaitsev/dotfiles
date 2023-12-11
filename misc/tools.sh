@@ -35,6 +35,11 @@ popd
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+mkdir -p ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
+
 # fetch libevent https://github.com/libevent/libevent.git
 # pushd libevent
 # 	[ ! -f configure ] && buildstep "libevent/autoconf" sh autogen.sh

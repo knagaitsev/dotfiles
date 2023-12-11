@@ -38,7 +38,18 @@ require("lazy").setup({
 		end
 	},
 	'nvim-tree/nvim-web-devicons',
-	'nvim-tree/nvim-tree.lua',
+	-- 'nvim-tree/nvim-tree.lua',
+	-- 'preservim/nerdtree',
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		},
+	},
 	{
 		'nvim-telescope/telescope.nvim',
 		tag = '0.1.5',
@@ -61,6 +72,7 @@ require("lazy").setup({
 		-- build = "yarn install && yarn build",
 		lazy = false,
 	},
+	"nvim-treesitter/nvim-treesitter",
   -- { "folke/neoconf.nvim", cmd = "Neoconf" },
   -- "folke/neodev.nvim",
 })
@@ -81,13 +93,30 @@ require("feline").setup({
     components = ctp_feline.get(),
 })
 
-require("nvim-tree").setup({
-	-- actions = {
- --    open_file = {
- --      quit_on_open = true,
- --    },
- --  },
+require('which-key').setup()
+
+-- require("nvim-tree").setup({
+-- 	on_attach = function(bufnr)
+-- 		local api = require "nvim-tree.api"
+-- 		api.config.mappings.default_on_attach(bufnr)
+-- 		vim.keymap.set('n', '<cr>', bufnr)
+-- 	end,
+-- 	-- {key = "<enter>", action = "tabnew"}
+-- 	-- actions = {
+--  --    open_file = {
+--  --      quit_on_open = true,
+--  --    },
+--  --  },
+-- })
+
+require("neo-tree").setup({
+	window = {
+		mappings = {
+			["<2-LeftMouse>"] = "open_tab_drop",
+			["<cr>"] = "open_tab_drop",
+		},
+	},
 })
 
-local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
+-- local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
 
