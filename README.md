@@ -1,13 +1,17 @@
 How to install:
 
 ```
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish
+
 sudo apt install ripgrep ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen python3-venv
 
 misc/tools.sh
 ./install.sh
 ```
 
-Then add to your path:
+Then add to your path (if needed):
 ```
 # bash/zsh
 export PATH=~/.local/bin:$PATH

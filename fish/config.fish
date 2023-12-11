@@ -2,6 +2,8 @@
 set fish_greeting ""
 export TERM="xterm-256color"
 
+fish_add_path ~/.local/bin
+
 oh-my-posh init fish --config ~/.config/fish/themes/tonybaloney.omp.json | source
 
 fish_config theme choose "Tomorrow Night Bright"
