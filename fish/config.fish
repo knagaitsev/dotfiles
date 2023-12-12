@@ -20,6 +20,7 @@ alias gis "git status"
 alias gia "git add"
 alias gic "git commit -m"
 alias gip "git push"
+alias gp "sshadd; git pull"
 
 # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 #
