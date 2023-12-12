@@ -21,8 +21,8 @@ ln -sF ${DOTFILES}/nvim ~/.config/nvim
 #  nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 echo "installing terminfos"
-tic -x misc/xterm-256color-italic.terminfo
-tic -x misc/tmux-256color.terminfo
+# tic -x misc/xterm-256color-italic.terminfo
+# tic -x misc/tmux-256color.terminfo
 
 cd ~/.local/share/nvim/lazy/coc.nvim
 yarn install
