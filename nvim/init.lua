@@ -112,8 +112,9 @@ require('which-key').setup()
 require("neo-tree").setup({
 	window = {
 		mappings = {
-			-- ["<2-LeftMouse>"] = "open_tab_drop",
-			-- ["<cr>"] = "open_tab_drop",
+			["<2-LeftMouse>"] = "open_drop",
+			["<cr>"] = "open_drop",
+			["t"] = "open_tab_drop",
 		},
 	},
 })
