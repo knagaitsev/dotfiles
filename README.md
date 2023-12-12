@@ -5,7 +5,7 @@ sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
 
-sudo apt install ripgrep ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen python3-venv
+sudo apt install clangd ripgrep ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen python3-venv
 
 make
 ./install.sh
