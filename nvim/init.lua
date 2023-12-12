@@ -37,6 +37,7 @@ require("lazy").setup({
 		config = function(_, opts)
 		end
 	},
+	-- 'romgrk/barbar.nvim',
 	'nvim-tree/nvim-web-devicons',
 	-- 'nvim-tree/nvim-tree.lua',
 	-- 'preservim/nerdtree',
@@ -120,6 +121,16 @@ require("neo-tree").setup({
 })
 
 -- local currentScriptPath = debug.getinfo(1, "S").source:sub(2)
+
+-- require("catppuccin").setup({
+-- 	flavour = "frappe",
+-- 	custom_highlights = function(colors)
+--         return {
+-- 					  TabLineSel = { bg = colors.pink },
+--             -- TabLine = { bg = colors.white },
+--         }
+--     end
+-- })
 
 vim.cmd("colorscheme catppuccin-frappe")
 
