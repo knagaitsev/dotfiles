@@ -70,7 +70,7 @@ require("lazy").setup({
 	-- },
 	{
 		"neoclide/coc.nvim",
-		build = "yarn ci",
+		build = "npm ci",
 		lazy = false,
 	},
 	"nvim-treesitter/nvim-treesitter",
