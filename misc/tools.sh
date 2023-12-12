@@ -41,7 +41,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 
-curl -sfLS https://install-node.vercel.app | bash -s 20 -y --prefix=$HOME/.local/bin
+curl -sfLS https://install-node.vercel.app | bash -s 20 -y --prefix=$HOME/.local
 $HOME/.local/bin/npm install --global yarn
 
 # fetch libevent https://github.com/libevent/libevent.git
