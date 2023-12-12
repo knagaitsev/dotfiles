@@ -14,7 +14,7 @@ alias sshadd 'eval (ssh-agent -c); ssh-add;'
 # local
 set -l script_path ~/.config/fish/scripts
 
-alias gi $script_path/gi.sh
+alias g $script_path/g.sh
 
 alias gis "git status"
 alias gia "git add"
