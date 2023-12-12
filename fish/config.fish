@@ -11,6 +11,16 @@ fish_config theme choose "Tomorrow Night Bright"
 # alias sshadd 'bash; eval "$(ssh-agent)"; ssh-add;'
 alias sshadd 'eval (ssh-agent -c); ssh-add;'
 
+# local
+set -l script_path ~/.config/fish/scripts
+
+alias gi $script_path/gi.sh
+
+alias gis "git status"
+alias gia "git add"
+alias gic "git commit -m"
+alias gip "git push"
+
 # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 #
 # set -e LD_INCLUDE_PATH
