@@ -20,7 +20,8 @@ alias gis "git status"
 alias gia "git add"
 alias gic "git commit -m"
 alias gip "git push"
-alias gp "eval (ssh-agent -c); ssh-add && git pull"
+alias gp $script_path/gp.sh
+# alias gp "eval (ssh-agent -c); ssh-add && git pull"
 
 # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 #
