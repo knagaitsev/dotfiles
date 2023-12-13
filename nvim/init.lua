@@ -116,6 +116,14 @@ require("neo-tree").setup({
 			["<2-LeftMouse>"] = "open_drop",
 			["<cr>"] = "open_drop",
 			["t"] = "open_tab_drop",
+			["n"] = { 
+				"add",
+				-- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
+				-- some commands may take optional config options, see `:h neo-tree-mappings` for details
+				config = {
+					show_path = "none" -- "none", "relative", "absolute"
+				}
+			},
 		},
 	},
 })
