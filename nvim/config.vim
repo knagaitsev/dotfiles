@@ -99,8 +99,9 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 nnoremap <leader>m :make<CR>
 nnoremap <leader>Q :qall<CR>
 
-noremap <C-l> :tabprevious<CR>
-noremap <C-h> :tabnext<CR>
+noremap <S-Left> :tabprevious<CR>
+noremap <S-Right> :tabnext<CR>
+
 noremap <leader>f :ClangFormat<CR>
 
 nnoremap <leader>P :PackerSync<CR>
@@ -173,10 +174,13 @@ nmap <leader>rn <Plug>(coc-rename)
 
 noremap <C-t> :tabnew<CR>
 map <C-f> /
+map <S-F> <cmd>Telescope live_grep<cr>
 map <C-c> y
 map <C-z> u
 map <C-y> <C-r>
 map <C-s> :w<CR>
+
+nmap <Tab> <C-w>w
 
 map <C-n> :Neotree<CR>
 
@@ -199,5 +203,8 @@ vmap <S-Tab> <gv
 " inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+inoremap <silent><expr> <Enter> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
