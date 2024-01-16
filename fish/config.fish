@@ -117,6 +117,7 @@ if test -f ~/miniconda3/bin/conda
     eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 
     conda config --set changeps1 False
+		conda activate base
 #		conda config --set auto_activate_base false
 end
 # <<< conda initialize <<<
