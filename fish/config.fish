@@ -124,3 +124,7 @@ end
 
 bind \t 'if not commandline -P; commandline -f complete; end'
 
+if test -f "$HOME/.cargo/env"
+    bass source "$HOME/.cargo/env"
+end
+
