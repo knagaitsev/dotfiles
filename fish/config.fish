@@ -5,6 +5,7 @@ export TERM="xterm-256color"
 fish_add_path ~/.local/bin
 
 oh-my-posh init fish --config ~/.config/fish/themes/tonybaloney.omp.json | source
+oh-my-posh disable notice
 
 fish_config theme choose "Tomorrow Night Bright"
 
@@ -109,3 +110,16 @@ alias gp 'if test -z "$SSH_AGENT_PID"; eval (ssh-agent -c) && ssh-add; end && gi
 # # opam configuration
 # source /Users/nick/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 # source ~/dotfiles/fish/iterm.fish; or true
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f ~/miniconda3/bin/conda
+    eval ~/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+
+    conda config --set changeps1 False
+#		conda config --set auto_activate_base false
+end
+# <<< conda initialize <<<
+
+bind \t 'if not commandline -P; commandline -f complete; end'
+
